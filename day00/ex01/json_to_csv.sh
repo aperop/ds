@@ -1,1 +1,3 @@
-.items | ["id","created_at","name","has_test","alternate_url"], (.[] | [.id,.created_at,.name,.has_test,.alternate_url]) | @csv
+#!/bin/sh
+
+jq -r -f filter.jq ../ex00/hh.json > hh.csv
