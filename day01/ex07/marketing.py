@@ -57,7 +57,7 @@ def marketing():
         case "loyalty_program":
             print(*loyalty_program(clients, participants), sep="\n")
         case _:
-            raise NameError(f'name {sys.argv[1]} is not defined')
+            raise ValueError(f'name {sys.argv[1]} is not defined')
 
 
 if __name__ == '__main__':
