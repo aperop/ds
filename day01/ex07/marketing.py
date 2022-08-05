@@ -35,11 +35,11 @@ def init():
 
 
 def call_center(clients, participants, recipients):
-    return (set(clients) - set(recipients)) | (set(participants) - set(recipients))
+    return set(clients) - set(recipients)
 
 
-def potential_clients(participants, recipients):
-    return set(participants) - set(recipients)
+def potential_clients(participants, clients):
+    return set(participants) - set(clients)
 
 
 def loyalty_program(clients, participants):
@@ -53,7 +53,7 @@ def marketing():
             case "call_center":
                 print(*call_center(clients, participants, recipients), sep="\n")
             case "potential_clients":
-                print(*potential_clients(participants, recipients), sep="\n")
+                print(*potential_clients(participants, clients), sep="\n")
             case "loyalty_program":
                 print(*loyalty_program(clients, participants), sep="\n")
             case _:
