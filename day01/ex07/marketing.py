@@ -48,17 +48,18 @@ def loyalty_program(clients, participants):
 
 def marketing():
     clients, participants, recipients = init()
-    if len(sys.argv) == 2:
-        match sys.argv[1]:
-            case "call_center":
-                print(*call_center(clients, participants, recipients), sep="\n")
-            case "potential_clients":
-                print(*potential_clients(participants, clients), sep="\n")
-            case "loyalty_program":
-                print(*loyalty_program(clients, participants), sep="\n")
-            case _:
-                raise NameError(f'name {sys.argv[1]} is not defined')
+
+    match sys.argv[1]:
+        case "call_center":
+            print(*call_center(clients, participants, recipients), sep="\n")
+        case "potential_clients":
+            print(*potential_clients(participants, clients), sep="\n")
+        case "loyalty_program":
+            print(*loyalty_program(clients, participants), sep="\n")
+        case _:
+            raise NameError(f'name {sys.argv[1]} is not defined')
 
 
 if __name__ == '__main__':
-    marketing()
+    if len(sys.argv) == 2:
+        marketing()
