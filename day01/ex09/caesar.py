@@ -8,27 +8,23 @@ def check():
         raise ValueError('text must contein only ascii symbols and latest arg must be number')
 
 
-def encode():
+def code(text, flag):
     check()
-    text = list(sys.argv[2])
     alpha = list(map(chr, range(ord('a'), ord('z')+1)))
-    # ALPHA = list(map(chr, range(ord('A'), ord('Z')+1)))
-    text = [chr((alpha.index(i) + int(sys.argv[3])) % len(alpha)) if i in alpha else i for i in text]
-    print (text)
-    # print([((ord(i) + int(sys.argv[3])) % len(ALPHA)) if ord(i) in ALPHA else i for i in text])
-
-
-def decode():
-    check()
-    line = sys.argv[2]
+    ALPHA = list(map(chr, range(ord('A'), ord('Z')+1)))
+    cipher = "".join(chr((alpha.index(i) + flag * int(sys.argv[3])) \
+        % len(alpha) + 97) if i in alpha else i for i in text)
+    cipher = "".join(chr((ALPHA.index(i) + flag * int(sys.argv[3])) \
+        % len(ALPHA) + 65) if i in ALPHA else i for i in cipher)
+    return(cipher)
 
 
 def init():
     match sys.argv[1]:
         case "encode":
-            encode()
+            print(code(sys.argv[2], 1))
         case "decode":
-            decode()
+            print(code(sys.argv[2], -1))
         case _:
             raise ValueError(f'command \"{sys.argv[1]}\" is not defined')
 
