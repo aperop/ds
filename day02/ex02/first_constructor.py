@@ -12,7 +12,7 @@ class Research():
                 if lines[0].rstrip() != 'head,tail' or len(lines) < 2:
                     raise Exception('File must contains a header with two strings delimited by a comma')
                 for line in lines[1:]:
-                    if line.rstrip() not in {'0,0', '0,1', '1,0', '1,1'}:
+                    if line.rstrip() not in {'0,1', '1,0'}:
                         raise Exception('The data must contains only 0 or 1')
                 return(lines)
 
