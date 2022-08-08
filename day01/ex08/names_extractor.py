@@ -4,6 +4,8 @@ import sys
 def extract():
     with open(sys.argv[1]) as f_in:
         with open("employees.tsv", mode='w') as f_out:
+            f_out.write("Name" + "\t" + "Surname" + "\t" + "E-mail")
+            f_out.write("\n")
             for line in f_in:
                 name = (line.split(".", 1))[0]
                 surname = ((line.split(".", 1)[1]).split("@"))[0]
