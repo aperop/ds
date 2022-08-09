@@ -1,0 +1,6 @@
+
+We have made 11 observations from tossing a coin: 
+5 of them were tails and 6 of them were heads. 
+The probabilities are 45.45454545454545% and 54.54545454545454%, respectively. 
+Our forecast is that in the text 3 observations we will have: 
+[0, 1] tail and [1, 0] heads.

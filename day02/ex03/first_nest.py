@@ -19,7 +19,7 @@ class Research():
                     arr.append(list(map(int, line.split(','))))
                 return(arr)
     
-    class Calculation():
+    class Calculations():
 
         def counts(arr):
             return [sum(i) for i in zip(*arr)]
@@ -33,6 +33,6 @@ if __name__ == '__main__':
     if len(sys.argv) == 2:
         r = Research(sys.argv[1])
         print(fr := r.file_reader())
-        print(*(count := r.Calculation.counts(fr)))
-        print(*r.Calculation.fractions(count))
+        print(*(count := r.Calculations.counts(fr)))
+        print(*r.Calculations.fractions(count))
 
