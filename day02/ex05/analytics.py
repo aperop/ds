@@ -1,5 +1,4 @@
 from random import randint
-import config
 
 
 class Research():
@@ -38,3 +37,7 @@ class Research():
         
         def predict_last(self):
             return self.arr[-1]
+        
+        def save_file(data, name_of_file, type_of_file):
+            with open(name_of_file + '.' + type_of_file, 'w') as f_out:
+                f_out.write(data)
