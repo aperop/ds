@@ -1,4 +1,4 @@
-#!/Users/dhawkgir/ds/day03/ex00/dhawkgir/bin/python
+#!/Users/dhawkgir/ds/day03/ex00/dhawkgir/bin/python3.10
 # -*- coding: utf-8 -*-
 import re
 import sys
