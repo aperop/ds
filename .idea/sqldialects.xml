@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project version="4">
-  <component name="SqlDialectMappings">
-    <file url="notebook:///Users/dhawkgir/ds/day06/ex03/ex03_aggs.ipynb" dialect="GenericSQL" />
-    <file url="PROJECT" dialect="SQLite" />
-  </component>
-</project>
