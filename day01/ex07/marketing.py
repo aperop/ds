@@ -34,7 +34,7 @@ def init():
     return clients, participants, recipients
 
 
-def call_center(clients, participants, recipients):
+def call_center(clients, recipients):
     return set(clients) - set(recipients)
 
 
@@ -51,7 +51,7 @@ def marketing():
 
     match sys.argv[1]:
         case "call_center":
-            print(*call_center(clients, participants, recipients), sep="\n")
+            print(*call_center(clients, participants), sep="\n")
         case "potential_clients":
             print(*potential_clients(participants, clients), sep="\n")
         case "loyalty_program":

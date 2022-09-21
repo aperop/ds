@@ -1,8 +1,10 @@
-class Research():
-    def file_reader(self):
+class Research:
+
+    @staticmethod
+    def file_reader():
         try:
             with open("data.csv", mode="r") as f_in:
-                return(f_in.read())
+                return f_in.read()
         except:
             pass
 

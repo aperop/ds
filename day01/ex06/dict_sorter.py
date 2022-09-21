@@ -27,7 +27,6 @@ def init():
 def sort_dict():
     list_of_tuples = init()
 
-
     result = dict(list_of_tuples)
     my_list = list(result.items())
     my_list.sort(key=lambda x: x[0])

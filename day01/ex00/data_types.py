@@ -1,13 +1,22 @@
 def data_types():
-    i = 42
-    s = '42'
-    f = 42.
-    b = True
-    m = [42]
-    d = {42: 42}
-    t = 42,
-    set = {i} & {s}
-    types = [type(i), type(s), type(f), type(b), type(m), type(d), type(t), type(set)]
+    my_int = 42
+    my_str = '42'
+    my_float = 42.
+    my_bool = True
+    my_list = [42]
+    my_dict = {42: 42}
+    my_tuple = 42,
+    my_set = {1}
+    types = [type(my_int),
+             type(my_str),
+             type(my_float),
+             type(my_bool),
+             type(my_list),
+             type(my_dict),
+             type(my_tuple),
+             type(my_set)
+             ]
+
     print("[", ", ".join(str(i).split("'")[1] for i in types), "]", sep="")
 
 

@@ -10,13 +10,13 @@ def check():
 
 def code(text, flag):
     check()
-    alpha = list(map(chr, range(ord('a'), ord('z')+1)))
-    ALPHA = list(map(chr, range(ord('A'), ord('Z')+1)))
-    cipher = "".join(chr((alpha.index(i) + flag * int(sys.argv[3])) \
-        % len(alpha) + 97) if i in alpha else i for i in text)
-    cipher = "".join(chr((ALPHA.index(i) + flag * int(sys.argv[3])) \
-        % len(ALPHA) + 65) if i in ALPHA else i for i in cipher)
-    return(cipher)
+    alpha = list(map(chr, range(ord('a'), ord('z') + 1)))
+    alpha_upper = list(map(chr, range(ord('A'), ord('Z') + 1)))
+    cipher = "".join(chr((alpha.index(i) + flag * int(sys.argv[3]))
+                         % len(alpha) + 97) if i in alpha else i for i in text)
+    cipher = "".join(chr((alpha_upper.index(i) + flag * int(sys.argv[3]))
+                         % len(alpha_upper) + 65) if i in alpha_upper else i for i in cipher)
+    return cipher
 
 
 def init():

@@ -27,7 +27,6 @@ def init():
 def to_dict():
     list_of_tuples = init()
 
-
     result = {}
     for value, key in list_of_tuples:
         result.setdefault(key, []).append(value)
@@ -35,6 +34,7 @@ def to_dict():
     for k, v in result.items():
         for i in v:
             print(f"\'{k}\': \'{i}\'")
+
 
 if __name__ == '__main__':
     to_dict()

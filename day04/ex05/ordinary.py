@@ -3,10 +3,10 @@
 import sys
 import resource as res
 
+
 def read_on_list(path):
     with open(path, 'r') as file:
-        lst = file.readlines()
-    return lst
+        return file.readlines()
 
 
 if __name__ == "__main__":

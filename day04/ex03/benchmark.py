@@ -3,14 +3,14 @@ import sys
 from functools import reduce
 
 
-def loop(number):
+def loop(number: int) -> int:
     sum = 0
     for i in range(number + 1):
         sum += i*i
     return sum
 
 
-def my_func(func, number, calc_number):
+def my_func(func: str, number: int, calc_number: int) -> None:
     match func:
         case "loop":
             print(timeit.timeit(lambda: loop(calc_number), number=number))

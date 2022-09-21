@@ -1,4 +1,4 @@
-class Must_read():
+class Must_read:
     try:
         with open("data.csv", mode="r") as f_in:
             print(f_in.read())

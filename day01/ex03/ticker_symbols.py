@@ -2,27 +2,29 @@ import sys
 
 
 def init_dict():
-    COMPANIES = {
+    companies = {
         'Apple': 'AAPL',
         'Microsoft': 'MSFT',
         'Netflix': 'NFLX',
         'Tesla': 'TSLA',
         'Nokia': 'NOK'
     }
-    STOCKS = {
+    stocks = {
         'AAPL': 287.73,
         'MSFT': 173.79,
         'NFLX': 416.90,
         'TSLA': 724.88,
         'NOK': 3.37
     }
-    return COMPANIES, STOCKS
+    return companies, stocks
+
 
 def get_key(d, value):
     for k, v in d.items():
         if v == value:
             return k
     return 'Unknown ticker symbol'
+
 
 def search():
     companies, stocks = init_dict()

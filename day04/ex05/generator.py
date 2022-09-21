@@ -3,7 +3,8 @@
 import sys
 import resource as res
 
-def generator(path):
+
+def generator(path: str):
     with open(path, 'r') as file:
         for line in file:
             yield line

@@ -6,10 +6,10 @@ def letter_starter():
         lines = [emp.rstrip() for emp in f_in]
     for emp in lines:
         emp = emp.split("\t")
-        if (emp[-1] == sys.argv[1]):
+        if emp[-1] == sys.argv[1]:
             print(f"Dear {emp[0]}, welcome to our team. "
-            "We are sure that it will be a pleasure to work with you. "
-            "That’s a precondition for the professionals that our company hires.")
+                  f"We are sure that it will be a pleasure to work with you. "
+                  f"That’s a precondition for the professionals that our company hires.")
 
 
 if __name__ == '__main__':
